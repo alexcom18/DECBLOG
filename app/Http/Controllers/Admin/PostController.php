@@ -111,7 +111,7 @@ class PostController extends Controller
         $this->authorize('author', $post);
         $post->delete();
 
-        Cache::flush();
+        Cache::flush(); 
 
         return redirect()->route('admin.posts.index')->with('info','La publicacion se eliminó con exito');
     }
