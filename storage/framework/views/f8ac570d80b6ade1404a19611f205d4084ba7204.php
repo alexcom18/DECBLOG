@@ -20,7 +20,8 @@
                <figure>
                    <?php if($post->image): ?>
                    
-                   <img class="w.full h-80 object-cover object-center" src="<?php echo e(Storage::url($post->image->url)); ?>" alt="">
+                   <img class="w.full h-80 object-cover object-center" src="<?php echo e(asset($post->image->url)); ?>" alt="">
+                   
                    <?php else: ?>
                    <img class="w.full h-80 object-cover object-center" src="https://cdn.pixabay.com/photo/2021/07/12/19/42/sup-6421284_960_720.jpg" alt="">
                    <?php endif; ?>

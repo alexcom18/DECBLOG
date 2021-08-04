@@ -9,7 +9,8 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <article class="w-full h-80 bg-cover bg-center <?php if($loop->first): ?> md:col-span-2 <?php endif; ?>" style="background-image: url(<?php if($post->image): ?> <?php echo e(Storage::url($post->image->url)); ?> <?php else: ?> https://cdn.pixabay.com/photo/2021/07/12/19/42/sup-6421284_960_720.jpg <?php endif; ?>)">
+
+                <article class="w-full h-80 bg-cover bg-center <?php if($loop->first): ?> md:col-span-2 <?php endif; ?>" style="background-image: url(<?php if($post->image): ?> <?php echo e(asset("storage/" . $post->image->url)); ?> <?php else: ?> https://cdn.pixabay.com/photo/2021/07/12/19/42/sup-6421284_960_720.jpg <?php endif; ?>)">
                     <div class="w-full h-full px-8 flex flex-col justify-center">
 
                         <div>
