@@ -116,7 +116,8 @@ unset($__errorArgs, $__bag); ?>
             <div class="image-wrapper">
                 <?php if(isset($post->image)): ?>
 
-                    <img id="picture" src="<?php echo e(Storage::url($post->image->url)); ?>" alt="">
+                    
+                    <img id="picture" src="<?php echo e(asset("storage/" . $post->image->url)); ?>" alt="">
                 <?php else: ?>
                     <img id="picture" src="https://cdn.pixabay.com/photo/2021/07/12/19/42/sup-6421284_960_720.jpg" alt="">
                 <?php endif; ?>
