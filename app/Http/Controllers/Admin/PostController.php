@@ -49,6 +49,7 @@ class PostController extends Controller
         
         $post = Post::create($request->all());
 
+        
         if($request->file('file')){
            $url = Storage::put('posts', $request->file('file'));
 
@@ -57,6 +58,7 @@ class PostController extends Controller
            ]);
         }
 
+        
         Cache::flush();
 
         if($request->tags){

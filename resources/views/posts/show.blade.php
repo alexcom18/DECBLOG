@@ -14,7 +14,7 @@
                <figure>
                    @if($post->image)
                    
-                   <img class="w.full h-80 object-cover object-center" src="{{ asset($post->image->url) }}" alt="">
+                   <img class="w.full h-80 object-cover object-center" src="{{ asset("storage/" . $post->image->url) }}" alt="">
                    {{-- <img class="w.full h-80 object-cover object-center" src="{{Storage::url($post->image->url)}}" alt=""> --}}
                    @else
                    <img class="w.full h-80 object-cover object-center" src="https://cdn.pixabay.com/photo/2021/07/12/19/42/sup-6421284_960_720.jpg" alt="">
